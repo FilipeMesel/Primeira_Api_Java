@@ -29,6 +29,7 @@ public class ReuniaoController {
     @RequestMapping(path = "/reuniao", method = RequestMethod.POST)
     public ResponseEntity criarReuniao(@RequestBody Reuniao reuniao) throws ParseException
     {
+        System.out.println("Solicitação POST recebida: " + reuniao);
         List<Reuniao> reunioes = reuniaoRepository.findAll();
         boolean isSalaLivre = true;
 
